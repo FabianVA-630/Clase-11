@@ -71,14 +71,10 @@ De las 251 carreras relevadas, 152 son elegibles para gratuidad. Pero esa cifra 
 			 <figure>
                 <canvas id="otro"></canvas>
                 <figcaption>
-
-            <p><em>Un subtítulo presenta una pregunta que se responde con una visualización de datos</em>. A continuación, se explica la pertinencia de tal visualización, con apoyo en el <a href="https://datavizcatalogue.com/ES/index.html" target="_blank">Catálogo de Visualización de Datos</a> o la <a href="https://www.visual-literacy.org/periodic_table/periodic_table.html" target="_blank">Tabla Periódica de Métodos de Visualización</a>, que debe estar vinculado. Y se cierra con un comentario para la respuesta visualizada.</p>
-
-            <p>Usted puede modificar el orden de presentación de esta página e incluir, por ejemplo, un preámbulo que pregunte qué entendemos por "carreras de Diseño" o qué tipo de instituciones concentran la mayor parte de las vacantes.</p>
-
-            <p>Otra alternativa es mantener el orden actual para analizar, por ejemplo, el impacto salarial en relación con la inversión en el arancel, o bien transitar hacia preguntas que requieran fuentes oficiales adicionales, tales como el <a href="https://portal.beneficiosestudiantiles.cl/gratuidad#references_tabs_field_asociar_subproceso_tab1" target="_blank">portal de beneficios estudiantiles</a> de la Subsecretaría de Educación Superior si desea abordar la gratuidad.</p>
-
-            <p>Sea que mantenga o modifique el orden, corresponderá revisar la pertinencia de títulos de primer, segundo y cuarto nivel, además de los datos en visualización.</p>
+					Arancel promedio anual por región (en pesos CLP):
+					Datos 2026, obtenidos del
+                    <a href="https://www.mifuturo.cl/servicio-de-informacion-de-educacion-superior/" target="_blank">Servicio de Información de Educación Superior (SIES)</a>, de la Subsecretaría de Educación Superior y de la <a href="https://www.cnachile.cl/Paginas/Inicio.aspx" target="_blank">Comisión Nacional de Acreditación</a>.
+        
             
             <h5>Fuentes</h5>
             <p>Nombre; Nombre; Nombre</p>
@@ -106,6 +102,34 @@ De las 251 carreras relevadas, 152 son elegibles para gratuidad. Pero esa cifra 
       datasets: [{
         label: '# of Votes',
         data: [59, 5, 12, 4, 13, 6, 11, 8, 6, 7, 6, 4, 4, 2, 2, 1 ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+				<div>
+  <canvas id="otro"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('otro');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Metropolitana', 'La Araucanía', 'Valparaíso', 'Ñuble', 'Biobío', 'Maule', 'Coquimbo', 'O Higgins', 'Los Lagos', 'Los Ríos', 'Tarapacá', 'Antofagasta', 'Arica y Parinacota', 'Aysén', 'Magallanes', 'Atacama'],
+      datasets: [{
+        label: '# of Votes',
+        data: [$3.039.355, $2.921.714, $2.850.333, $3.104.500, $2.718.839, $3.051.000, $3.024.046, $2.882.421, $2.932.625, $3.088.286, $3.043.333, $2.553.750, $3.104.500, $2.921.000, $2.921.000, $2.795.000 ],
         borderWidth: 1
       }]
     },
