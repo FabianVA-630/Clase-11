@@ -1,5 +1,5 @@
 <div>
-  <canvas id="myChart"></canvas>
+  <canvas id="dispersion"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
